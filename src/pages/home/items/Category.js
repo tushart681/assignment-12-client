@@ -10,14 +10,14 @@ const Category = () => {
     const {data:product = []} = useQuery({
         queryKey: ['product'],
         queryFn: async() => {
-            const res = await fetch(`http://localhost:5000/product`)
+            const res = await fetch(`https://y-seven-gilt.vercel.app/product`)
             const data =await res.json()
             return data
         }
     })
     const [PageUser, setPageUser] = useState({})
    useEffect(() => {
-    fetch(`http://localhost:5000/user?email=${user?.email}`)
+    fetch(`https://y-seven-gilt.vercel.app/user?email=${user?.email}`)
   .then(res => res.json())
   .then(data => {
     console.log(data)

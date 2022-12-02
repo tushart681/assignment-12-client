@@ -27,7 +27,7 @@ const BookModal = ({ data }) => {
       product_id: _id
     }
     console.log(booking)
-    fetch('http://localhost:5000/booked', {
+    fetch('https://y-seven-gilt.vercel.app/booked', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

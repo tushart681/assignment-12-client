@@ -10,7 +10,7 @@ const SignUp = () => {
     const {createUser, updateUser} = useContext(AuthContext)
     const nevigate = useNavigate()
     const handleSignIn = (data) => {
-        fetch('http://localhost:5000/user', {
+        fetch('https://y-seven-gilt.vercel.app/user', {
             method:'POST',
             headers:{
                 'content-type':'application/json'

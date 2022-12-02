@@ -12,7 +12,7 @@ const Navber = () => {
     loginProvider(googleProvieder)
     .then(result => {
         const user = result.user;
-        fetch('http://localhost:5000/user', {
+        fetch('https://y-seven-gilt.vercel.app/user', {
               method:'POST',
               headers:{
                   'content-type':'application/json'
@@ -33,7 +33,7 @@ const Navber = () => {
     .catch(error => console.error(error))
   }
   useEffect(() => {
-    fetch('http://localhost:5000/user')
+    fetch('https://y-seven-gilt.vercel.app/user')
   .then(res => res.json())
   .then(data => {
     const userLogged = data.find(el => el?.email == user?.email)

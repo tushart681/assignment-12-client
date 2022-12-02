@@ -7,7 +7,7 @@ const MyProducts = () => {
     const { data: product = [], refetch} = useQuery({
         queryKey: ['product', user?.email],
         queryFn: async () => {
-          const res = await fetch(`http://localhost:5000/product?email=${user?.email}`)
+          const res = await fetch(`https://y-seven-gilt.vercel.app/product?email=${user?.email}`)
           const data = await res.json();
           return data
         }
@@ -15,7 +15,7 @@ const MyProducts = () => {
       const handleDelete = user => {
         const Agree =window.confirm(`are you sure:${user.name}`)
     if(Agree){
-      fetch(`http://localhost:5000/product/${user._id}`, {
+      fetch(`https://y-seven-gilt.vercel.app/product/${user._id}`, {
         method: 'DELETE'
       })
       .then(res => res.json())

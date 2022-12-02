@@ -15,7 +15,7 @@ const AdProduct = ({ selectedDate }) => {
     const navigate = useNavigate()
     const handleData = data => {
         setDatabase(data)
-        fetch('http://localhost:5000/product', {
+        fetch('https://y-seven-gilt.vercel.app/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -38,7 +38,7 @@ const AdProduct = ({ selectedDate }) => {
                 const imgData = {
                     image: img.data.url
                 }
-                fetch('http://localhost:5000/product',{
+                fetch('https://y-seven-gilt.vercel.app/product',{
                     method: 'POST',
             headers: {
                 'content-type': 'application/json'
